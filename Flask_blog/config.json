@@ -1,0 +1,21 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql+pymysql://root:root@localhost/flask",
+    "prod_uri": "mysql+pymysql://root:root@localhost/flask",
+    "fb_url": "https://facebook.com/flask",
+    "tw_url": "https://twitter.com/flask",
+    "gh_url": "https://github.com/flask",
+    "blog_name": "PyCoders",
+    "tag_line": "A blog liked by Programmers",
+    "gmail-user": "varsha6871@gmail.com",
+    "gmail-password": "varsha150",
+    "about_text": "Hi, I am Miss. Varsha Dipak Patil. I am a python developer at TCS.",
+    "no_of_post": 3,
+    "login_image": "login.svg",
+    "admin_user": "varsha",
+    "admin_password": "varsha@0212",
+    "upload_location": "D:\\Desktop\\Flask_blog\\static"
+  }
+}
