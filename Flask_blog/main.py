@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, flash
+from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 from flask_mail import Mail
@@ -126,8 +126,8 @@ def edit(sno):
                 post.date = date
                 db.session.commit()
                 return redirect("/edit/"+sno)
-    post = Posts.query.filter_by(sno=sno).first()
-    return render_template('edit.html', params=params, post=post, sno=sno)
+        post = Posts.query.filter_by(sno=sno).first()
+        return render_template('edit.html', params=params, post=post, sno=sno)
 
 
 @app.route("/uploader", methods=['GET', 'POST'])
@@ -167,8 +167,8 @@ def contact():
         mail.send_message('New message from blog' + name,
                           sender=email, recipients=[params['gmail-user']],
                           body=msg + "\n" + phone)
-        flash("Thanks for submitting your details. We will get back to you soon.","success")
     return render_template('contact.html', params=params)
 
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=False)
