@@ -8,6 +8,7 @@ import os
 import math
 import logging
 import sys
+import pymysql
 
 with open('config.json', 'r') as c:
     params = json.load(c)["params"]

@@ -2,8 +2,8 @@
   "params":
   {
     "local_server": "True",
-    "local_uri": "mysql+pymysql://root:root@localhost/flask",
-    "prod_uri": "mysql+pymysql://root:root@localhost/flask",
+    "local_uri": "pymysql+mysql://root:root@127:0:0:1/flask",
+    "prod_uri": "pymysql+mysql://root:root@127:0:0:1/flask",
     "fb_url": "https://facebook.com/flask",
     "tw_url": "https://twitter.com/flask",
     "gh_url": "https://github.com/flask",
