@@ -6,6 +6,8 @@ import json
 from datetime import datetime
 import os
 import math
+import logging
+import sys
 
 with open('config.json', 'r') as c:
     params = json.load(c)["params"]
@@ -28,6 +30,8 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
 db = SQLAlchemy(app)
 
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 class Contacts(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
